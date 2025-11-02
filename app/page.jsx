@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Card from "./comonent/Card"
-import { Key } from "react";
-import { it } from "node:test";
+import Pagination from "../app/comonent/Pagination"
+
 
 async function getProducts(){
  
  const res = await fetch("https://dummyjson.com/products",{
-   cache:"no-store"
+    next:{revalidate:1000}
  });
- return res.json()
+ return res.json();
 
 }
 export default async function Home() {
@@ -19,7 +19,7 @@ export default async function Home() {
 
 
   return (
-    <div className="flex min-h-screen  items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="w-full h-screen bg-zinc-50 font-sans dark:bg-black">
       <div className="conatiner">
          <div className="flex flex-wrap  gap-3">
           {
@@ -32,6 +32,10 @@ export default async function Home() {
 
           
          
+       </div>
+       <div className="m-6">
+
+          <Pagination/>
        </div>
       </div>
       
