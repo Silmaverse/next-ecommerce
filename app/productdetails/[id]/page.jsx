@@ -16,7 +16,8 @@ async  function page()  {
 
   return (
     <>
-      <div className="w-400 p-6 bg-gray-200 border border-gray-100 rounded">
+      <div className="w-400 
+      p-6 bg-gray-200 border border-gray-100 rounded">
           <div className="w-full  bg-gray-100 rounded-[5px]">
                   {/* <Image src={"."} width={500} height={500} alt='errr' /> */}
            </div>
