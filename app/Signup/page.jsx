@@ -4,7 +4,6 @@ import Register from "../comonent/Register"
 const page = () => {
   return (
     <>
-
      <Register/>
     </>
   )
